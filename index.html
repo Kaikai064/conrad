@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI-Driven Microbial Fuel Cell - Enhanced</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="An AI-driven microbial fuel cell that purifies wastewater while generating sustainable energy. This enhanced website for the Conrad Challenge addresses innovation, feasibility, marketing, finances, and investor relations."
+  />
+  <meta property="og:title" content="AI Microbial Fuel Cell" />
+  <meta property="og:description" content="Purify wastewater, generate clean energy, and transform global sustainability—now with investor-focused content." />
+  <meta property="og:image" content="your_logo_or_banner_image.jpg" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /*********************************************************************
+     *                         GLOBAL STYLES (Original)
+     *********************************************************************/
+    :root {
+      /* PRIMARY COLORS */
+      --primary-color: #004466;
+      --accent-color: #fce181;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+
+      /* FONT SIZES */
+      --font-size-base: 16px;
+      --font-size-h1: 2.5rem;
+      --font-size-h2: 2rem;
+      --font-size-h3: 1.25rem;
+      --font-size-p: 1rem;
+
+      /* SPACING */
+      --spacing-section: 4rem;
+      --spacing-block: 2rem;
+
+      /* TRANSITIONS */
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    }
+
+    html, body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.5;
+      font-size: var(--font-size-base);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /*********************************************************************
+     *                           HEADER / NAV (Original)
+     *********************************************************************/
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color var(--transition-speed);
+    }
+
+    nav ul li a:hover {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    /*********************************************************************
+     *                           HERO SECTION (Updated)
+     *********************************************************************/
+    .hero {
+      position: relative;         /* keep positioning for overlay & content */
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;          /* ensures the hero-img won't extend outside */
+    }
+
+    /* New: .hero-img is absolutely positioned behind overlay & content */
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;         /* scales/center-crops the image */
+      z-index: 0;                /* behind overlay & content */
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2; /* ensures text is above the overlay & image */
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: var(--font-size-h1);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .cta-button {
+      background-color: var(--accent-color);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color var(--transition-speed);
+    }
+
+    .cta-button:hover {
+      background-color: #ffe6a3;
+    }
+
+    /*********************************************************************
+     *                           MAIN CONTENT (Original)
+     *********************************************************************/
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-section) 2rem;
+    }
+
+    section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    section h2 {
+      font-size: var(--font-size-h2);
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .content-block {
+      background-color: #fff;
+      padding: var(--spacing-block);
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+    }
+
+    .content-block h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    /*********************************************************************
+     *                   INNOVATION SECTION CUSTOM STYLES (Original)
+     *********************************************************************/
+    .innovation-section {
+      background-color: #fafafa;
+      padding: var(--spacing-block);
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .innovation-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .innovation-content img {
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+
+    .innovation-heading {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .innovation-tagline {
+      font-style: italic;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .innovation-paragraph {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      color: #333;
+    }
+
+    .innovation-keypoints {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+
+    .innovation-keypoints li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 24px;
+    }
+    .innovation-keypoints li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      line-height: 1rem;
+      top: 0;
+    }
+
+    .innovation-keypoints li strong {
+      color: var(--primary-color);
+    }
+
+    .emphasis {
+      font-weight: 500;
+      background-color: #fef9e7;
+      padding: 1rem;
+      border-radius: 4px;
+      border-left: 4px solid #ffd54f;
+    }
+
+    .investor-highlights {
+      background-color: #e8f4f8;
+      border-left: 4px solid #00b2cc;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .investor-highlights h4 {
+      color: #004466;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .investor-highlights ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+
+    .investor-highlights ul li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /***************************
+     *    TEAM SECTION (Original)
+     ***************************/
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-member {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .team-member h4 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .team-member p {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /***************************
+     *   FORMS & SIMULATIONS (Original)
+     ***************************/
+    .simulation-form,
+    .tracker-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .simulation-form label,
+    .tracker-form label {
+      min-width: 150px;
+      font-weight: 500;
+    }
+
+    .simulation-form input[type="number"],
+    .tracker-form input[type="number"] {
+      padding: 0.5rem;
+      width: 120px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .simulation-form button,
+    .tracker-form button {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+    }
+
+    .simulation-form button:hover,
+    .tracker-form button:hover {
+      background-color: #006999;
+    }
+
+    .simulation-results,
+    .tracker-results {
+      margin-top: 1rem;
+      background-color: #def2f1;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .simulation-results h4,
+    .tracker-results h4 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .chart-container {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /***************************
+     *    RESPONSIVE DESIGN (Original)
+     ***************************/
+    @media screen and (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      nav ul {
+        display: none; /* Could implement a hamburger menu for mobile */
+      }
+
+      .innovation-content img {
+        max-width: 100%;
+      }
+    }
+
+    /********************************************************
+     *   NEW SECTIONS: Timeline, Partnerships, Resources, etc.
+     ********************************************************/
+    /* 1. MULTI-YEAR TIMELINE */
+    .timeline-section {
+      background-color: #eef;
+      padding: var(--spacing-section) 2rem;
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+      text-align: center;
+    }
+    .timeline-title {
+      font-size: var(--font-size-h2);
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+    }
+    .year-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .year-timeline::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 500px); 
+      width: 1000px;
+      height: 4px;
+      background: #333;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    .year-block {
+      position: relative;
+      width: 16%;
+      text-align: center;
+    }
+    .year-block .year-label {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .year-arrow {
+      width: 4px;
+      height: 30px;
+      background-color: #fff;
+      margin: 0.5rem auto;
+    }
+    .year-task {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #000;
+    }
+
+    /* 2. Modular System Visual (3 Buttons) */
+    .modular-system {
+      background-color: #fff;
+      padding: var(--spacing-section) 2rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+    }
+    .modular-heading {
+      font-size: var(--font-size-h2);
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .modular-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .mod-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-color);
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+    }
+    .mod-btn:hover {
+      background-color: #ffe6a3;
+    }
+
+    /* Container for detail text */
+    .module-details {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .module-text {
+      display: none; /* hidden by default */
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .module-text h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    /* 3. CTA for Partnerships */
+    .partners-cta {
+      background-color: #fafafa;
+      padding: var(--spacing-section) 2rem;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+    }
+    .partners-cta h3 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .partners-cta p {
+      margin-bottom: 1rem;
+      max-width: 600px;
+      margin: 0 auto 1rem auto;
+    }
+
+    /* 4. Downloadable Resources */
+    .resources-section {
+      background-color: #fff;
+      padding: var(--spacing-section) 2rem;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+    }
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto 0 auto;
+    }
+    .resource-item {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .resource-item h4 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      text-decoration: none;
+    }
+
+    /* 5. COMPETITOR COMPARISON Tool */
+    .comparison-section {
+      background-color: #fff;
+      padding: var(--spacing-section) 2rem;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+    }
+    .comparison-heading {
+      font-size: var(--font-size-h2);
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .comparison-chart {
+      width: 800px;
+      height: 400px;
+      margin: 2rem auto 0 auto;
+      background-color: #ddd;
+      border-radius: 6px;
+    }
+
+    /* 6. INFOGRAPHIC (new) */
+    .infographic-section {
+      background-color: #fafafa;
+      padding: var(--spacing-section) 2rem;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: var(--spacing-block);
+      margin-bottom: var(--spacing-block);
+    }
+    .infographic-title {
+      font-size: var(--font-size-h2);
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .infographic-charts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .infographic-chart-container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .infographic-chart-container h4 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    /***************************
+     *    FOOTER OVERRIDE
+     ***************************/
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: var(--spacing-block);
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent-color);
+      color: #000;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .back-to-top:hover {
+      background-color: #ffe6a3;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER (Original) ========== -->
+  <header>
+    <div class="nav-container">
+      <div class="logo" aria-label="Website Logo">AI Microbial Fuel Cell</div>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#innovation">Innovation</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#simulation">Simulation</a></li>
+          <li><a href="#tracker">Sustainability</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO (Updated) ========== -->
+  <section class="hero" aria-label="Hero Banner">
+    <!-- Instead of background CSS, we place an <img> for the hero -->
+    <img class="hero-img" src="hero_image.png" alt="Hero Image" />
+    
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Transforming Wastewater into Clean Water &amp; Energy</h1>
+      <p>
+        Our AI-driven Microbial Fuel Cell system purifies wastewater while generating
+        sustainable energy—unlocking a zero-waste future for our planet.
+      </p>
+      <a class="cta-button" href="#innovation">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ========== MAIN CONTENT (Original) ========== -->
+  <main>
+    <!-- ========== OUR INNOVATION SECTION (Original) ========== -->
+    <section id="innovation" aria-labelledby="innovation-title" class="innovation-section">
+      <h2 id="innovation-title">Our Innovation</h2>
+      <div class="innovation-content">
+        <img
+          src="https://via.placeholder.com/800x400/cccccc/000?text=Your+Innovation+Image"
+          alt="Diagram of the AI Microbial Fuel Cell Model"
+          loading="lazy"
+        />
+
+        <div class="innovation-heading">
+          <p><strong>Innovation Name:</strong> AI-Driven Microbial Fuel Cell</p>
+          <p class="innovation-tagline">
+            <strong>Tagline:</strong> Revolutionizing water treatment and energy generation in one self-sustaining system.
+          </p>
+        </div>
+
+        <p class="innovation-paragraph">
+          Imagine a world where wastewater becomes a clean and renewable resource, fueling both
+          sustainable energy and access to safe drinking water. Our AI-driven microbial fuel cell 
+          transforms this global challenge into an opportunity, combining wastewater purification 
+          with energy generation in a single, innovative, self-sustaining system. Unlike reverse
+          osmosis, which consumes significant energy and chemicals, or anaerobic digesters limited
+          to specific waste streams, our technology adapts in real time to diverse waste types,
+          delivering clean water, renewable energy, and near-zero CO₂ emissions with minimal 
+          maintenance.
+        </p>
+
+        <p class="innovation-paragraph">
+          At its core, the technology harnesses the natural metabolic processes of specialized
+          microorganisms to break down organic matter in wastewater. This process releases electrons,
+          which are captured to generate electricity, while simultaneously removing pollutants.
+          By integrating predictive AI algorithms, the system continually optimizes parameters 
+          (such as pH, temperature, and waste composition) to maximize energy output and water 
+          purification efficiency. Unlike traditional wastewater treatment systems requiring
+          large infrastructure or costly chemicals, our system is decentralized, modular,
+          and scalable—serving both industrial hubs and remote communities.
+        </p>
+
+        <p class="innovation-paragraph">
+          We’ve already initiated pilot collaborations with local municipalities to validate
+          the system at scale, and we partner with environmental scientists to refine our
+          microbial consortia. Early tests indicate up to a 20% higher energy yield compared to
+          conventional MFC prototypes, with a 95% reduction in pollutants.
+        </p>
+
+        <p class="innovation-paragraph">
+          <strong>Key Differentiators:</strong>
+        </p>
+        <ul class="innovation-keypoints">
+          <li><strong>1. AI-Driven Adaptability:</strong> Real-time data from built-in sensors feeds into 
+            machine learning models that adapt to changing waste streams, ensuring continuous 
+            optimization without manual oversight.</li>
+          <li><strong>2. Energy Positive Operation:</strong> The electricity generated can exceed the system’s 
+            operational needs, making it a net producer of green energy while treating water.</li>
+          <li><strong>3. Minimal Maintenance:</strong> Decentralized design and self-regulating AI reduce 
+            the need for frequent operator intervention or large-scale infrastructure.</li>
+          <li><strong>4. Scalability &amp; Versatility:</strong> Its modular setup caters to small rural 
+            installations, city-wide wastewater systems, and industrial complexes alike, delivering
+            impact across multiple sectors.</li>
+        </ul>
+
+        <p class="innovation-paragraph emphasis">
+          By turning wastewater into a resource, we’re unlocking a zero-waste future where clean water 
+          and renewable energy are universally accessible. Our approach transforms lives, safeguards 
+          public health, and fosters global sustainability—while providing tangible economic benefits 
+          to adopters. Our AI-Driven Microbial Fuel Cell is not just a technological breakthrough—
+          it’s a paradigm shift.
+        </p>
+
+        <!-- New: Investor Highlights (IR info, cost breakdown, IP strategy, etc.) -->
+        <div class="investor-highlights">
+          <h4>Investor Highlights &amp; IP Strategy</h4>
+          <ul>
+            <li><strong>Intellectual Property:</strong> Our proprietary AI algorithms and unique microbial
+              consortia are protected under pending patents, ensuring defensibility and market exclusivity.</li>
+            <li><strong>Cost &amp; Revenue Model:</strong> Estimated manufacturing cost is ~$10,000–$15,000 
+              per unit. Revenue streams include system leasing, carbon credits, and selling surplus electricity.</li>
+            <li><strong>Go-To-Market Plan:</strong> Focus on pilot deployments in urban municipalities, 
+              high-waste industries, and rural communities. Partnerships with NGOs and local governments
+              help scale in underserved regions.</li>
+            <li><strong>Next Steps:</strong> Secure seed funding of $500K for final R&amp;D, pilot expansions,
+              and initial market entry. Projected ROI within 3–5 years based on lease contracts and 
+              carbon offset sales.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTENDED IMPACT SECTION (Original) ========== -->
+    <section id="impact" aria-labelledby="impact-title">
+      <h2 id="impact-title">Intended Impact</h2>
+      <div class="content-block">
+        <h3>How will it help?</h3>
+        <p>
+          By combining purification and energy generation, our system addresses urgent global needs 
+          for clean water and renewable power—reducing costs, pollution, and infrastructure barriers. 
+          In real-world scenarios, this technology helps municipalities cut water treatment expenses
+          by up to 40% and industries lower their carbon footprints dramatically.
+        </p>
+        <h3>Why is it revolutionary?</h3>
+        <p>
+          Integrated AI ensures near-zero CO₂ emissions and minimal maintenance. We adapt seamlessly to 
+          various waste streams, from agricultural effluents to domestic sewage, making the solution 
+          universally applicable and game-changing for water-scarce regions worldwide.
+        </p>
+        <h3>What problem does it solve?</h3>
+        <p>
+          Water scarcity and high energy costs affect billions. Our technology reuses wastewater, empowers 
+          communities to become more resilient, and supports rapid disaster-relief responses where 
+          traditional infrastructures fail. As populations grow, the demand for sustainable water and 
+          energy solutions has never been higher.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== TEAM SECTION (Original) ========== -->
+    <section id="team" aria-labelledby="team-title">
+      <h2 id="team-title">Meet the Team</h2>
+      <p style="text-align:center; max-width:600px; margin: 0 auto 2rem;">
+        We’re a group of five high school students from around the world, united by a passion to solve 
+        environmental challenges using innovation and AI. Our combined strengths in engineering, AI, 
+        outreach, and design drive this project’s success.
+      </p>
+      <div class="team-grid">
+        <!-- Repeat .team-member for each person -->
+        <article class="team-member" aria-labelledby="team-member-1">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Portrait of Xx from the UK"
+            loading="lazy"
+          />
+          <h4 id="team-member-1">Xx (UK)</h4>
+          <p><em>Project Manager</em></p>
+          <p>Oversees timelines, budgets, and local sustainability campaigns.</p>
+        </article>
+
+        <article class="team-member" aria-labelledby="team-member-2">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Portrait of Yy from India"
+            loading="lazy"
+          />
+          <h4 id="team-member-2">Yy (India)</h4>
+          <p><em>AI Integration Specialist</em></p>
+          <p>Develops machine learning models that optimize microbial fuel cell performance.</p>
+        </article>
+
+        <article class="team-member" aria-labelledby="team-member-3">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Portrait of Zz from Japan"
+            loading="lazy"
+          />
+          <h4 id="team-member-3">Zz (Japan)</h4>
+          <p><em>Engineer &amp; Designer</em></p>
+          <p>Designs hardware prototypes and ensures system scalability for diverse regions.</p>
+        </article>
+
+        <article class="team-member" aria-labelledby="team-member-4">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Portrait of Xx from the USA"
+            loading="lazy"
+          />
+          <h4 id="team-member-4">Xx (USA)</h4>
+          <p><em>Marketing &amp; Outreach</em></p>
+          <p>Coordinates partnerships, brand messaging, and investor relations.</p>
+        </article>
+
+        <article class="team-member" aria-labelledby="team-member-5">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Portrait of Yy from India"
+            loading="lazy"
+          />
+          <h4 id="team-member-5">Yy (India)</h4>
+          <p><em>Data Analytics</em></p>
+          <p>Analyzes pilot data and refines system efficiency with real-time insights.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== INTERACTIVE SIMULATION SECTION (Original) ========== -->
+    <section id="simulation" aria-labelledby="simulation-title">
+      <h2 id="simulation-title">Interactive Simulation</h2>
+      <div class="content-block">
+        <p>
+          Experiment with our microbial fuel cell performance by adjusting variables like waste composition, daily water usage,
+          and location factors. The simulation displays estimated clean water produced, energy generated, and CO₂ emissions saved.
+        </p>
+        <form class="simulation-form" onsubmit="return false;" aria-label="Simulation Inputs">
+          <label for="wasteComposition">Waste Composition (%)</label>
+          <input type="number" id="wasteComposition" name="wasteComposition" min="0" max="100" value="50" aria-required="true" />
+
+          <label for="dailyWater">Daily Water Usage (liters)</label>
+          <input type="number" id="dailyWater" name="dailyWater" min="0" value="1000" aria-required="true" />
+
+          <label for="locationFactor">Location Factor (1-5)</label>
+          <input type="number" id="locationFactor" name="locationFactor" min="1" max="5" value="3" aria-required="true" />
+
+          <button type="button" onclick="runSimulation()">Run Simulation</button>
+        </form>
+
+        <div class="simulation-results" id="simulationResults" style="display:none;">
+          <h4>Simulation Results</h4>
+          <p id="waterOutput"></p>
+          <p id="energyOutput"></p>
+          <p id="co2Output"></p>
+        </div>
+
+        <!-- Chart Container for the Simulation -->
+        <div class="chart-container">
+          <canvas id="simulationChart" aria-label="Simulation Result Chart" role="img"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SUSTAINABILITY TRACKER SECTION (Original) ========== -->
+    <section id="tracker" aria-labelledby="tracker-title">
+      <h2 id="tracker-title">Gamified Sustainability Tracker</h2>
+      <div class="content-block">
+        <p>
+          Calculate how much clean water and energy you could save by implementing our microbial fuel cell in your 
+          community or industry. Enter your population size and waste type below to see potential impact. Adjust
+          these metrics to explore your region’s sustainability potential.
+        </p>
+        <form class="tracker-form" onsubmit="return false;" aria-label="Sustainability Tracker Inputs">
+          <label for="population">Population Size</label>
+          <input type="number" id="population" name="population" min="0" value="5000" aria-required="true" />
+
+          <label for="wasteType">Waste Type Factor (1=Low, 10=High)</label>
+          <input type="number" id="wasteType" name="wasteType" min="1" max="10" value="5" aria-required="true" />
+
+          <button type="button" onclick="calculateSavings()">Calculate</button>
+        </form>
+
+        <div class="tracker-results" id="trackerResults" style="display:none;">
+          <h4>Your Potential Savings</h4>
+          <p id="trackerWater"></p>
+          <p id="trackerEnergy"></p>
+          <p id="trackerCO2"></p>
+        </div>
+
+        <!-- Chart Container for the Tracker -->
+        <div class="chart-container">
+          <canvas id="trackerChart" aria-label="Tracker Result Chart" role="img"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== NEW SECTIONS BELOW ========== -->
+  <!-- 1. MULTI-YEAR TIMELINE -->
+  <section class="timeline-section">
+    <h2 class="timeline-title">Our Progress: Multi-Year Project Timeline</h2>
+    <div class="year-timeline">
+      <!-- YEAR 1 -->
+      <div class="year-block">
+        <div class="year-label">YEAR 1</div>
+        <div class="year-arrow"></div>
+        <div class="year-task">[Milestone 1: Early R&D]</div>
+        <div class="year-task">[Task: Basic Prototypes]</div>
+      </div>
+
+      <!-- YEAR 2 -->
+      <div class="year-block">
+        <div class="year-label">YEAR 2</div>
+        <div class="year-arrow"></div>
+        <div class="year-task">[Milestone 2: Pilot Testing]</div>
+        <div class="year-task">[Task: Collaborate with Municipalities]</div>
+      </div>
+
+      <!-- YEAR 3 -->
+      <div class="year-block">
+        <div class="year-label">YEAR 3</div>
+        <div class="year-arrow"></div>
+        <div class="year-task">[Milestone 3: Scaling Up]</div>
+        <div class="year-task">[Task: Partnerships with NGOs / Industries]</div>
+      </div>
+
+      <!-- YEAR 4 -->
+      <div class="year-block">
+        <div class="year-label">YEAR 4</div>
+        <div class="year-arrow"></div>
+        <div class="year-task">[Milestone 4: Global Rollout]</div>
+        <div class="year-task">[Task: Launch in Disaster-Prone Regions]</div>
+      </div>
+
+      <!-- YEAR 5 -->
+      <div class="year-block">
+        <div class="year-label">YEAR 5</div>
+        <div class="year-arrow"></div>
+        <div class="year-task">[Milestone 5: Full Market Adoption]</div>
+        <div class="year-task">[Task: Ongoing IP & AI Enhancements]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. MODULAR SYSTEM VISUAL (3 Buttons) -->
+  <section class="modular-system">
+    <h2 class="modular-heading">Modular System Visual</h2>
+    <p>Click any of the buttons below to learn about each key component of our AI-driven microbial fuel cell.</p>
+
+    <!-- Buttons side by side -->
+    <div class="modular-buttons">
+      <button class="mod-btn" onclick="showModuleDetail('bioreactor')">Bioreactor</button>
+      <button class="mod-btn" onclick="showModuleDetail('electrodes')">Electrodes</button>
+      <button class="mod-btn" onclick="showModuleDetail('aiControl')">AI Control</button>
+    </div>
+
+    <!-- Detailed text blocks (initially hidden) -->
+    <div class="module-details">
+      <!-- Bioreactor Detail -->
+      <div id="bioreactor" class="module-text">
+        <h4>Bioreactor Chamber</h4>
+        <p>
+          The bioreactor is the core environment where specialized microbes thrive and break down 
+          organic pollutants in wastewater. By metabolizing these compounds, they release electrons 
+          used to generate electricity, while simultaneously removing harmful substances from the 
+          water stream. This process dramatically lowers BOD (Biochemical Oxygen Demand) and fosters 
+          cleaner effluent.
+        </p>
+        <p>
+          Carefully managed pH, temperature, and nutrient levels optimize microbial activity, ensuring 
+          consistent purification performance. The modular design also enables easy scaling: from small 
+          rural installations to large industrial setups. This ensures that even remote or low-infrastructure 
+          communities can benefit from advanced water treatment without relying on heavy infrastructure.
+        </p>
+      </div>
+
+      <!-- Electrodes Detail -->
+      <div id="electrodes" class="module-text">
+        <h4>Electrode Assembly</h4>
+        <p>
+          The electrodes capture electrons released by the microbes, transforming chemical energy into 
+          electrical power. Typically comprising an anode and a cathode, these surfaces provide a habitat 
+          for microbial biofilms. As the microbes consume organic matter, electrons flow through an 
+          external circuit, creating an electrical current.
+        </p>
+        <p>
+          This unique mechanism enables the system to be energy-positive, offsetting or surpassing its 
+          operational energy needs. In certain deployments, surplus electricity can be sold back to 
+          the grid or used to power essential services in local communities, further increasing the 
+          economic viability of the installation.
+        </p>
+      </div>
+
+      <!-- AI Control Detail -->
+      <div id="aiControl" class="module-text">
+        <h4>AI Control & Monitoring</h4>
+        <p>
+          A sophisticated AI system orchestrates real-time adjustments in pH, temperature, nutrient 
+          delivery, and retention time, ensuring that both water purification and energy generation 
+          remain at optimal levels. Sensors embedded throughout the cell feed continuous data streams 
+          into predictive algorithms.
+        </p>
+        <p>
+          Operators can access a user-friendly dashboard for instant performance metrics and alerts. 
+          When waste composition changes—say, a spike in nitrates or an influx of industrial effluent— 
+          the AI adaptively calibrates operational parameters, maintaining efficiency with minimal 
+          human intervention. This level of autonomy reduces labor costs and boosts reliability, 
+          especially in remote or disaster-affected regions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CTA FOR PARTNERSHIPS -->
+  <section class="partners-cta">
+    <h3>Partner With Us</h3>
+    <p>Whether you’re an investor, municipality, or NGO, our AI-driven MFC can address your specific needs—lowering costs and pollution while delivering clean water and sustainable energy.</p>
+    <p>Learn about pilot programs, ROI, and how to integrate our system into existing infrastructure.</p>
+  </section>
+
+  <!-- 4. DOWNLOADABLE RESOURCES (White Paper button updated) -->
+  <section class="resources-section">
+    <h2>Downloadable Resources</h2>
+    <p>White papers, infographics, and ROI calculators to guide your decision-making and showcase benefits.</p>
+    <div class="resources-grid">
+      <div class="resource-item">
+        <h4>White Paper</h4>
+        <p>Technical deep dive on MFC design, AI integration, and pilot data.</p>
+        <!-- Link to your Google Drive PDF -->
+        <a 
+          class="download-btn" 
+          href="https://drive.google.com/file/d/1BmzVuEYH6gmPh50Ut8boOGXapm9CvZyH/view?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Download PDF
+        </a>
+      </div>
+      <div class="resource-item">
+        <h4>Infographic</h4>
+        <p>Visual overview of cost savings, carbon offsets, and water purification efficiency.</p>
+        <!-- Could link to a PNG, or simply scroll to Infographic section below -->
+        <a class="download-btn" href="#infographic">View Infographic</a>
+      </div>
+      <div class="resource-item">
+        <h4>ROI Calculator</h4>
+        <p>Estimate your potential returns based on region, scale, and waste composition.</p>
+        <a class="download-btn" href="https://colab.research.google.com/drive/1p8jgO4Axs3T2GIiMPrKpCRh_FCHPiOpy">Access Simulation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INFOGRAPHIC SECTION (NEW) -->
+  <section id="infographic" class="infographic-section">
+    <h2 class="infographic-title">Infographic: Key Metrics</h2>
+    <p>Our AI-Driven MFC achieves remarkable results in cost savings, carbon offsets, and water purification efficiency. Explore these donut charts for a quick visual overview!</p>
+
+    <div class="infographic-charts">
+      <!-- Chart 1: Cost Savings -->
+      <div class="infographic-chart-container">
+        <h4>Cost Savings</h4>
+        <canvas id="infographicCostChart"></canvas>
+      </div>
+      <!-- Chart 2: Carbon Offsets -->
+      <div class="infographic-chart-container">
+        <h4>Carbon Offsets</h4>
+        <canvas id="infographicCarbonChart"></canvas>
+      </div>
+      <!-- Chart 3: Purification Efficiency -->
+      <div class="infographic-chart-container">
+        <h4>Water Purification</h4>
+        <canvas id="infographicWaterChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. COMPETITOR COMPARISON TOOL -->
+  <section class="comparison-section">
+    <h2 class="comparison-heading">Competitor Comparison</h2>
+    <p>Compare our AI-driven MFC to anaerobic digesters and reverse osmosis in cost, scalability, and CO₂ savings.</p>
+    <div class="comparison-chart">
+      <canvas id="competitorComparisonCanvas" aria-label="Competitor Comparison Chart" role="img"></canvas>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER (Moved to Bottom) ========== -->
+  <footer>
+    <p><strong>© 2024 Team AI Microbial Fuel Cell</strong></p>
+    <p>Conrad Challenge Innovation Stage | Cyber-Technology Category</p>
+    <p>
+      <small>
+        This website and its contents are for educational and competition purposes.<br/>
+        All intellectual property is protected and owned by [Your Team Name].
+      </small>
+    </p>
+    <a href="#top" class="back-to-top">Back to Top</a>
+  </footer>
+
+  <!-- ========== JAVASCRIPT (Original + Competitor Chart + Donut Charts) ========== -->
+  <script>
+    let simulationChart;
+    let trackerChart;
+    let competitorChart;
+    let infographicCostChart;
+    let infographicCarbonChart;
+    let infographicWaterChart;
+
+    // Show/Hide Detailed Text for Each Module (3-button approach)
+    function showModuleDetail(moduleId) {
+      const allModules = document.querySelectorAll('.module-text');
+      allModules.forEach(mod => mod.style.display = 'none');
+
+      const selected = document.getElementById(moduleId);
+      if (selected) {
+        selected.style.display = 'block';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      // --- Existing Simulation Chart ---
+      const simCtx = document.getElementById('simulationChart').getContext('2d');
+      simulationChart = new Chart(simCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Clean Water (L/day)', 'Energy (kWh/day)', 'CO₂ Saved (kg/day)'],
+          datasets: [{
+            label: 'Simulation Results',
+            data: [0, 0, 0],
+            backgroundColor: [
+              'rgba(54, 162, 235, 0.7)',
+              'rgba(255, 206, 86, 0.7)',
+              'rgba(75, 192, 192, 0.7)'
+            ],
+            borderColor: [
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          },
+          plugins: {
+            legend: { display: true }
+          }
+        }
+      });
+
+      // --- Existing Tracker Chart ---
+      const trackerCtx = document.getElementById('trackerChart').getContext('2d');
+      trackerChart = new Chart(trackerCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Water Saved (L/day)', 'Energy (kWh/day)', 'CO₂ Reduced (kg/day)'],
+          datasets: [{
+            label: 'Tracker Results',
+            data: [0, 0, 0],
+            backgroundColor: [
+              'rgba(153, 102, 255, 0.7)',
+              'rgba(255, 159, 64, 0.7)',
+              'rgba(255, 99, 132, 0.7)'
+            ],
+            borderColor: [
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          },
+          plugins: {
+            legend: { display: true }
+          }
+        }
+      });
+
+      // --- Competitor Comparison Chart ---
+      const competitorCtx = document.getElementById('competitorComparisonCanvas').getContext('2d');
+      const solutions = ["AI-Driven MFC", "Anaerobic Digester", "Reverse Osmosis"];
+      const costData = [400, 600, 800];  
+      const scaleData = [9, 6, 5];       
+      const co2Data = [50, 30, 20];      
+
+      competitorChart = new Chart(competitorCtx, {
+        type: 'bar',
+        data: {
+          labels: solutions,
+          datasets: [
+            {
+              label: "Cost ($/unit)",
+              data: costData,
+              backgroundColor: "rgba(75, 192, 192, 0.7)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1
+            },
+            {
+              label: "Scalability (0–10)",
+              data: scaleData,
+              backgroundColor: "rgba(255, 206, 86, 0.7)",
+              borderColor: "rgba(255, 206, 86, 1)",
+              borderWidth: 1
+            },
+            {
+              label: "CO₂ Savings (tons/year)",
+              data: co2Data,
+              backgroundColor: "rgba(153, 102, 255, 0.7)",
+              borderColor: "rgba(153, 102, 255, 1)",
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: { display: true }
+          }
+        }
+      });
+
+      // --- NEW Donut Charts for Infographic ---
+      // Cost Savings
+      const costCtx = document.getElementById('infographicCostChart').getContext('2d');
+      infographicCostChart = new Chart(costCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ["Saved", "Remaining"],
+          datasets: [{
+            label: "Cost Savings",
+            data: [70, 30], // Example: 70% cost savings vs 30% leftover
+            backgroundColor: [
+              "rgba(54, 162, 235, 0.7)",
+              "rgba(200, 200, 200, 0.3)"
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            tooltip: { enabled: true }
+          }
+        }
+      });
+
+      // Carbon Offsets
+      const carbonCtx = document.getElementById('infographicCarbonChart').getContext('2d');
+      infographicCarbonChart = new Chart(carbonCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ["Offset", "Unaccounted"],
+          datasets: [{
+            label: "Carbon Offsets",
+            data: [85, 15], // Example: 85% offset vs 15% not offset
+            backgroundColor: [
+              "rgba(75, 192, 192, 0.7)",
+              "rgba(200, 200, 200, 0.3)"
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            tooltip: { enabled: true }
+          }
+        }
+      });
+
+      // Water Purification Efficiency
+      const waterCtx = document.getElementById('infographicWaterChart').getContext('2d');
+      infographicWaterChart = new Chart(waterCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ["Purified", "Remaining Pollutants"],
+          datasets: [{
+            label: "Purification Efficiency",
+            data: [95, 5], // Example: 95% efficiency vs 5% leftover
+            backgroundColor: [
+              "rgba(255, 206, 86, 0.7)",
+              "rgba(200, 200, 200, 0.3)"
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            tooltip: { enabled: true }
+          }
+        }
+      });
+    });
+
+    // --- Existing Simulation Logic ---
+    function runSimulation() {
+      const wasteComp = parseFloat(document.getElementById('wasteComposition').value);
+      const dailyWater = parseFloat(document.getElementById('dailyWater').value);
+      const locFactor = parseFloat(document.getElementById('locationFactor').value);
+
+      const cleanWaterProduced = (dailyWater * (1 - wasteComp / 200)) * locFactor; 
+      const energyGenerated = wasteComp * locFactor * 0.75;
+      const co2Saved = energyGenerated * 1.5;
+
+      document.getElementById('simulationResults').style.display = 'block';
+      document.getElementById('waterOutput').textContent =
+        `Clean Water Produced: ~${cleanWaterProduced.toFixed(2)} liters/day`;
+      document.getElementById('energyOutput').textContent =
+        `Energy Generated: ~${energyGenerated.toFixed(2)} kWh/day`;
+      document.getElementById('co2Output').textContent =
+        `CO₂ Emissions Saved: ~${co2Saved.toFixed(2)} kg/day`;
+
+      simulationChart.data.datasets[0].data = [
+        cleanWaterProduced.toFixed(2),
+        energyGenerated.toFixed(2),
+        co2Saved.toFixed(2)
+      ];
+      simulationChart.update();
+    }
+
+    // --- Existing Tracker Logic ---
+    function calculateSavings() {
+      const popSize = parseFloat(document.getElementById('population').value);
+      const wasteFactor = parseFloat(document.getElementById('wasteType').value);
+
+      const waterSavingPerPerson = 10 * (11 - wasteFactor);
+      const totalWaterSaving = waterSavingPerPerson * popSize;
+      const energySaving = popSize * (wasteFactor / 2);
+      const co2Saving = energySaving * 1.2;
+
+      document.getElementById('trackerResults').style.display = 'block';
+      document.getElementById('trackerWater').textContent =
+        `Clean Water Saved: ~${totalWaterSaving.toFixed(2)} liters/day`;
+      document.getElementById('trackerEnergy').textContent =
+        `Energy Generated: ~${energySaving.toFixed(2)} kWh/day`;
+      document.getElementById('trackerCO2').textContent =
+        `CO₂ Emissions Reduced: ~${co2Saving.toFixed(2)} kg/day`;
+
+      trackerChart.data.datasets[0].data = [
+        totalWaterSaving.toFixed(2),
+        energySaving.toFixed(2),
+        co2Saving.toFixed(2)
+      ];
+      trackerChart.update();
+    }
+  </script>
+</body>
+</html>
