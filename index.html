@@ -108,10 +108,12 @@
     }
 
     /*********************************************************************
-     *                           HERO SECTION (Updated)
+     *                           HERO SECTION (Original)
      *********************************************************************/
     .hero {
-      position: relative;         /* keep positioning for overlay & content */
+      position: relative;
+      background: url('https://via.placeholder.com/1600x700/004466/ffffff?text=Hero+Banner')
+        no-repeat center/cover;
       min-height: 70vh;
       display: flex;
       align-items: center;
@@ -119,18 +121,6 @@
       color: #fff;
       text-align: center;
       padding: 2rem;
-      overflow: hidden;          /* ensures the hero-img won't extend outside */
-    }
-
-    /* New: .hero-img is absolutely positioned behind overlay & content */
-    .hero-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;         /* scales/center-crops the image */
-      z-index: 0;                /* behind overlay & content */
     }
 
     .hero-overlay {
@@ -145,7 +135,7 @@
 
     .hero-content {
       position: relative;
-      z-index: 2; /* ensures text is above the overlay & image */
+      z-index: 2;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -692,11 +682,8 @@
     </div>
   </header>
 
-  <!-- ========== HERO (Updated) ========== -->
+  <!-- ========== HERO (Original) ========== -->
   <section class="hero" aria-label="Hero Banner">
-    <!-- Instead of background CSS, we place an <img> for the hero -->
-    <img class="hero-img" src="hero_image.png" alt="Hero Image" />
-    
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Transforming Wastewater into Clean Water &amp; Energy</h1>
@@ -714,16 +701,14 @@
     <section id="innovation" aria-labelledby="innovation-title" class="innovation-section">
       <h2 id="innovation-title">Our Innovation</h2>
       <div class="innovation-content">
-        <img
-          src="https://via.placeholder.com/800x400/cccccc/000?text=Your+Innovation+Image"
-          alt="Diagram of the AI Microbial Fuel Cell Model"
-          loading="lazy"
-        />
+        <img src="https://assets.onecompiler.app/435nk7qyv/435njq5ee/3D%20model.jpg" alt="3D Model">
+
+
 
         <div class="innovation-heading">
           <p><strong>Innovation Name:</strong> AI-Driven Microbial Fuel Cell</p>
           <p class="innovation-tagline">
-            <strong>Tagline:</strong> Revolutionizing water treatment and energy generation in one self-sustaining system.
+            <strong>Tagline:</strong> Revolutionising water treatment and energy generation in one self-sustaining system.
           </p>
         </div>
 
@@ -837,58 +822,39 @@
       <div class="team-grid">
         <!-- Repeat .team-member for each person -->
         <article class="team-member" aria-labelledby="team-member-1">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Portrait of Xx from the UK"
-            loading="lazy"
-          />
-          <h4 id="team-member-1">Xx (UK)</h4>
+          <img src=	"https://assets.onecompiler.app/435nk7qyv/435nk9z6p/Jimin%20S%20-%20picture.JPG">
+          <h4 id="team-member-1">Jimin Suh (Japan)</h4>
           <p><em>Project Manager</em></p>
           <p>Oversees timelines, budgets, and local sustainability campaigns.</p>
         </article>
 
         <article class="team-member" aria-labelledby="team-member-2">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Portrait of Yy from India"
-            loading="lazy"
-          />
-          <h4 id="team-member-2">Yy (India)</h4>
-          <p><em>AI Integration Specialist</em></p>
-          <p>Develops machine learning models that optimize microbial fuel cell performance.</p>
+          <img src="	https://assets.onecompiler.app/435nk7qyv/435nk9z6p/Screenshot%202025-01-10%20at%2015.44.45.png">
+          <h4 id="team-member-2">Akshara Maddineni (UK)</h4>
+          <p><em>AI & Enigneering lead</em></p>
+          <p>Develops machine learning models that optimize microbial fuel cell performance. Designs hardware prototypes and ensures system scalability for diverse regions</p>
         </article>
-
+         
         <article class="team-member" aria-labelledby="team-member-3">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Portrait of Zz from Japan"
-            loading="lazy"
-          />
-          <h4 id="team-member-3">Zz (Japan)</h4>
-          <p><em>Engineer &amp; Designer</em></p>
-          <p>Designs hardware prototypes and ensures system scalability for diverse regions.</p>
+          <img src=	"	https://assets.onecompiler.app/435nk7qyv/435nk9z6p/Screenshot%202024-11-01%20at%200.15.58.png">
+          <h4 id="team-member-3">Miho Imai (Japan)</h4>
+          <p><em> Outreach lead </em></p>
+          <p>Brings experience from running successful community awareness initiatives.</p>
         </article>
 
         <article class="team-member" aria-labelledby="team-member-4">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Portrait of Xx from the USA"
-            loading="lazy"
-          />
-          <h4 id="team-member-4">Xx (USA)</h4>
-          <p><em>Marketing &amp; Outreach</em></p>
-          <p>Coordinates partnerships, brand messaging, and investor relations.</p>
+          <img src=	"	https://assets.onecompiler.app/435nk7qyv/435nk9z6p/202410_Miu_45x35.jpeg">
+          <h4 id="team-member-4">Miu Sonoda (Japan)</h4>
+          <p><em> Data Analyst </em></p>
+          <p> Applies insights from international science fairs to optimise system performance. </p>
         </article>
 
         <article class="team-member" aria-labelledby="team-member-5">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Portrait of Yy from India"
-            loading="lazy"
-          />
-          <h4 id="team-member-5">Yy (India)</h4>
-          <p><em>Data Analytics</em></p>
-          <p>Analyzes pilot data and refines system efficiency with real-time insights.</p>
+          <img src=	"https://assets.onecompiler.app/435nk7qyv/435nk9z6p/IMG_3907.jpeg">
+          <h4 id="team-member-5">Kai Masujima (USA)</h4>
+          <p><em>Sustainability advisor</em></p>
+          <p>Ensures alignment with SDGs, evaluates long-term impacts, and identifies opportunities for carbon credits and partnerships.
+</p>
         </article>
       </div>
     </section>
@@ -1307,7 +1273,7 @@
           labels: ["Saved", "Remaining"],
           datasets: [{
             label: "Cost Savings",
-            data: [70, 30], // Example: 70% cost savings vs 30% leftover
+            data: [70, 30], // Example: 70% cost savings vs 30% leftover costs
             backgroundColor: [
               "rgba(54, 162, 235, 0.7)",
               "rgba(200, 200, 200, 0.3)"
